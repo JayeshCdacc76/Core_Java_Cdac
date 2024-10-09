@@ -1,0 +1,648 @@
+JAVA
+		
+	java components
+		|
+--------------------------------
+|					|	
+JVM					JDK
+with Byte code
+					1. javac (compile the program)
+					2. java ( run the program (o/p))
+					3. appletviewer
+
+create-> compile->run(output)
+
+Featuer
+1. It is OOP's
+2. Secuered
+3. Platform independent
+4. Data Encapsulation,Data Hiding and Polymorphisam
+5. Inheritance
+6. Bytecode
+7. Execution way bottom to top
+
+Structure of Java Program
+
+	class MyClass	
+	{	
+	public static void main(String args[])
+		{
+
+	     statements;
+
+		}
+
+}
+
+/*
+MyClass is name of class or program
+String args[]  -> comman line argument
+(Bytecode file created)
+
+*/
+
+Step how to create program
+
+step1  create program in Notepad as
+
+class MyPrg
+{
+
+	public static void main(String args[])
+	{
+
+	System.out.println("Hello");
+	}
+
+
+}
+
+step2
+save program as MyPrg.java
+(source code which is created by user)
+
+step3
+compile program on command prompt
+c:> javac  MyPrg.java
+
+(after compilation(no Error) one file created that is MyPrg.class)
+MyPrg.class :- it is class file or bytecode file. which is created by compiler
+
+c:>java MyPrg
+output
+
+
+Datatype
+Integer
+	byte          1
+	short         2
+	int             4
+	long          8
+
+Float
+	float         4
+	double     8
+
+String
+	string
+	char
+
+char s;  2byte
+char s[30];
+
+Boolean 
+	boolean
+		true(1)
+		false(0)
+	
+
+
+------------------------
+		java Package
+			|
+-------------------------------------------
+|						|
+JAVA API                         User Defined Package
+java.lang
+java.util
+java.io
+java.net
+java.sql
+java.awt
+
+
+import java.util.Scanner;
+
+int a[],i;  //declared
+a=new int[5]; //5 size
+Scanner obj=new Scanner(System.in);
+
+for(i=0; i<a.length; i++)
+{
+a[i]=obj.nextInt();
+
+}
+class  and object
+
+
+class
+	it is an user defined datatype.
+	it is not occupied any type of space in memory.
+	it is not execute itself
+--class is a collection of 
+data members(variable), constructor and methods(user defined function)
+-- it is used with access specifier
+private
+	in this defined data members(variable) which access only inside the
+class.
+
+public
+	it is usded to defined constructor and methods.
+	in Java by default class is public.
+
+protected
+	it is used only in case of inheritance to defined variable
+in super class.
+
+Object
+	it is an instance of class.
+	object size is depend of class variables
+	only class member access with the help of object
+--- In java create object with the help of new keyword
+new is used to allocated dynamic memory for object
+---In java object does not contain garbage value
+-- for int 0 value ,float 0.0, String null, boolean false
+
+Syntax
+
+class ClassName
+{
+
+private
+		member variable
+public
+		member methods
+
+protected
+	define variable in case of inheritance
+
+
+}
+
+	public class MyClass
+	{
+	public static void main(String args[])
+	{
+	ClassName obj =new ClassName();
+
+	}
+	}
+
+
+
+A=56
+B=23
+C=79
+A=56
+B=23
+C=79
+
+
+A=100
+B=40
+C=140
+
+A=56
+B=34
+C=90
+
+A=100
+B=40
+C=140
+t1 Largest
+A=100
+B=40
+C=140
+
+obj Largest
+A=456
+B=34
+C=490
+
+Write a program create class student
+with member 
+rollno
+name
+percentage
+
+for 2 students
+
+
+Constructor
+	--special feature of oops
+	--it is defined in class
+	--classname and constructor name should be same
+	--constructor does not required return datatype
+	--in one program user create one default constructor
+	but multiplie parameterized constructor
+	--it is automatically execute when object is created
+Types of constructor
+1. default or parameter less constructor
+2. parameterized constructor
+
+1. Default constructor
+	to set the default values to object variables.
+Syntax of default constructor
+classname()
+{
+variable=value;
+}
+
+2. Paramterized constructor
+	multiple constructor with different paramter
+Syntax
+classname(parameter)
+{
+variable=parameter;
+}
+
+-------------------------------------------
+Array with Object
+		Array is collection of element with similar datatype. user easily used
+concept of array to defined objects. 
+	       all objects occupied constinious memory.
+	       Each object is access with the help of index.(Index associated object)
+		Using loop you can implement array with object.
+		Syntax
+		classname obj[ ];
+		obj=new classname[size];
+
+
+-----------------------------------------------------
+		
+class Test
+{
+private
+int a;
+String s;
+
+public
+
+
+
+}
+
+in java					c++
+Test t1=new Test();        // Test t1;
+
+Array With object
+Test t[]; 				 Test t[5];
+
+t=new Test[5];
+
+for(int i=0;i<5;i++)
+{
+t[i]=new Test();
+t[i[.set();						//t[0]
+}
+1. Method Overloading (Function Overloading)
+2. Exception Handaling
+3. Inheritance
+	Types of Inheritance
+	interface
+	super constructor
+	super keyword(Method Overridding)
+
+Method Overloading
+
+	In one class create multiple method with same name but their
+return datatype is different is known as Method overloading.
+		This method is execute with their parameters and sequence 
+of calling not sequence of createion.
+
+Exception Handaling
+
+try, catch, throw, throws, finally
+
+		Exception
+			|
+---------------------------------------------
+|							|
+Exception					User Defined Exception
+(Pre Defined)
+
+Exception is in built class in java. which give the permission
+to provide user level error if user pass wrong input.
+
+Syntax of try..........catch...........finally
+	
+	try
+	{
+	process statements;
+	-------------------
+	-------------------
+	}
+	catch(Exception obj)
+	{
+		Error Block;
+	}
+
+
+multiple catch statement
+
+try
+{
+Process statement
+}
+catch(Exception e)
+{
+Error
+}
+catch(ArrayIndexOutOfBoundException obj)
+{
+
+}
+
+
+Enter value for a and b
+
+10
+11
+Division=0
+Array Value=100
+
+
+Enter value for a and b
+
+10
+2
+Division=5
+Array Value=100
+Arry Error =java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 3
+
+---------------------------
+
+
+
+
+
+Inheritance
+
+		Super class
+			1.It is also known as base class or parent class.
+			2. Super class can't access sub class
+			3. In this defined protected access specifier.
+			4. java provide super keyword.
+		Sub Class
+			1. It is also known as derivied class or child class
+			2. it is easily access featueres of super class
+			
+
+Types of Inheritance
+1. Single Inheritance
+2. Multilevel Inherince
+3. Multiple Inherinace
+4. Hybrid Inheritance
+
+---important
+		extends,super ,implements,interface
+-- Method overriding
+Syntax
+class MySuper
+{
+
+private
+
+protected
+
+public
+
+
+}
+
+class sub_class extends MySuper
+{
+
+private
+
+public  
+}
+
+
+//Example of Single Inheritance
+class MySuper
+{
+	private int a,b,c;
+	
+	public
+	//default constructor
+	MySuper()
+	{
+		a=10;
+		b=4;
+		c=a+b;
+		System.out.println("Super class C="+c);
+	}
+	 void show()
+	 {
+		
+		System.out.println("Super Class");
+		
+	 }
+	
+}
+
+class Sub extends MySuper
+{
+	private int p,q,ans;
+		
+	public
+	Sub()
+	{
+		p=3;
+		q=2;
+		ans=p*q;
+		System.out.println("Sub Ans ="+ans);
+	}
+	void show()
+	{
+	super.show(); //method overriding	
+	System.out.println("Sub class");
+	
+	
+	}
+	
+}
+public class single {
+
+	public static void main(String[] args) 
+	{
+	
+		Sub obj=new Sub();
+		obj.show();
+		
+
+	}
+
+}
+
+
+
+//Example of Single Inheritance
+class MySuper
+{
+	private int a,b,c;
+	
+	public
+	//default constructor
+	MySuper()
+	{
+		a=10;
+		b=4;
+		c=a+b;
+		System.out.println("Super class C="+c);
+	}
+	//paramterized
+	MySuper(int x,int y)
+	{
+		a=x;
+		b=y;
+		System.out.println("Super class A="+a);
+		System.out.println("Super class B="+b);
+	}
+	 void show()
+	 {
+		
+		System.out.println("Super Class");
+		
+	 }
+	
+}
+
+class Sub extends MySuper
+{
+	private int p,q,ans;
+		
+	public
+	Sub()
+	{
+		super(); //call super class construactor
+		p=3;
+		q=2;
+		ans=p*q;
+		System.out.println("Sub Ans ="+ans);
+		
+	}
+	
+	//parameterized Constructor
+	Sub(int x,int y,int pp,int qq) //x and y value pass to default
+	{
+		super(x,y);
+		p=pp;
+		q=qq;
+		System.out.println("Sub P ="+p);
+		System.out.println("Sub Q ="+q);
+	}
+	void show()
+	{
+	super.show(); //method overriding	
+	System.out.println("Sub class");
+	
+	
+	}
+	
+}
+public class single {
+
+	public static void main(String[] args) 
+	{
+	
+		Sub obj=new Sub();
+		obj.show();
+		
+		Sub obj1=new Sub(10,20,30,40);
+				
+		
+
+	}
+
+}
+
+Multilevel Inheritance
+	
+	Grandfather  father son
+
+class A
+{
+
+private int id;
+String name;
+protected 
+int sal;
+
+public
+void set()
+{
+id=100;
+name="Sunil";
+sal=10000;
+}
+
+}
+class B extends A
+{
+private sal1;
+protected total;
+public
+void set()
+{
+super.set();
+sal1=20000;
+total=sal1+sal;
+}
+
+}
+
+class C extends B
+{
+private
+int net,salary;
+public 
+void set()
+{
+super.set();
+salary=5000;
+net=total+salary;
+System.out.println("Net Salary =" +net);
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
